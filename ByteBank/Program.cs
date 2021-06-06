@@ -19,10 +19,15 @@ namespace ByteBank
 
                 conta2.Transferir(200, conta);
             }
-            catch (SaldoInsuficienteException e)
+            catch (OperacaoFinanceiraException e)
             {
                 Console.WriteLine(e.Message);
+                Console.WriteLine(e.StackTrace);
                 Console.WriteLine("Exceção do tipo SaldoInsuficienteException");
+
+                Console.WriteLine("*** INFORMACOES DO INNEEXCEPTION ***");
+                Console.WriteLine(e.InnerException.Message);
+                Console.WriteLine(e.InnerException.StackTrace);
             }
 
             
@@ -43,13 +48,14 @@ namespace ByteBank
             //Teste de Sacar quando saldo é inferior ao valor a ser sacado
             try
             {
-               /* ContaCorrente contaCorrente = new ContaCorrente(123, 456456);
+                /*ContaCorrente contaCorrente = new ContaCorrente(123, 456456);
                 contaCorrente.Depositar(100);
                 contaCorrente.Sacar(400);*/
             }
             catch (SaldoInsuficienteException e)
             {
                 Console.WriteLine(e.Message);
+                Console.WriteLine(e.StackTrace);
                 Console.WriteLine("Exceção do tipo SaldoInsuficienteException");
             }
 
