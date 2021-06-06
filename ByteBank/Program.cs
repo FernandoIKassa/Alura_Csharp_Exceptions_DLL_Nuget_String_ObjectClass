@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.IO;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -10,14 +11,18 @@ namespace ByteBank
     {
         static void Main(string[] args)
         {
+            //Teste do método CarregarContas
+            CarregarContas();
+
+
 
             //Teste de Transferir com saldo insuficiente
             try
             {
-                ContaCorrente conta = new ContaCorrente(123, 24356);
+                /*ContaCorrente conta = new ContaCorrente(123, 24356);
                 ContaCorrente conta2 = new ContaCorrente(321, 786435);
 
-                conta2.Transferir(200, conta);
+                conta2.Transferir(200, conta);*/
             }
             catch (OperacaoFinanceiraException e)
             {
@@ -30,7 +35,6 @@ namespace ByteBank
                 Console.WriteLine(e.InnerException.StackTrace);
             }
 
-            
             //Teste de Sacar com valores negativos
             try
             {
@@ -42,7 +46,7 @@ namespace ByteBank
                 Console.WriteLine("Argumento com problema: " + e.ParamName);
                 Console.WriteLine("Ocorreu uma exceção do tipo ArgumentException");
                 Console.WriteLine(e.Message);
-                
+
             }
 
             //Teste de Sacar quando saldo é inferior ao valor a ser sacado
@@ -88,7 +92,7 @@ namespace ByteBank
                 Console.WriteLine(e.StackTrace);
             }
 
-
+            Console.WriteLine("Programa finalizado. Aperte qualquer tecla para finalizar...");
             Console.ReadLine();
         }
 
@@ -123,6 +127,42 @@ namespace ByteBank
         static void TestaDivisao(int divisor)
         {
             Dividir(10, divisor);
+        }
+
+        public static void CarregarContas()
+        {
+
+            using (LeitorDeArquivo leitor = new LeitorDeArquivo("contas.txt"))
+            {
+                leitor.LerProximaLinha();
+                leitor.LerProximaLinha();
+                leitor.LerProximaLinha();
+            }
+
+            //IOException longo
+            //LeitorDeArquivo leitor = null;
+            try
+            {
+                /*leitor = new LeitorDeArquivo("contas.txt");
+                leitor.LerProximaLinha();
+                leitor.LerProximaLinha();
+                leitor.LerProximaLinha();*/
+
+            }
+            catch (IOException)
+            {
+                Console.WriteLine("Excecao do tipo IOException capturada e tratada");
+
+            }
+            finally
+            {
+                /*if (leitor != null)
+                {
+                    leitor.Dispose();
+                }*/
+
+            }
+
         }
     }
 }
