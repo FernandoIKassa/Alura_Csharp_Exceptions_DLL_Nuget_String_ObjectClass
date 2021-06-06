@@ -10,23 +10,65 @@ namespace ByteBank
     {
         static void Main(string[] args)
         {
+
+            //Teste de Transferir com saldo insuficiente
             try
             {
-                ContaCorrente conta = new ContaCorrente(1, 0);
+                ContaCorrente conta = new ContaCorrente(123, 24356);
+                ContaCorrente conta2 = new ContaCorrente(321, 786435);
+
+                conta2.Transferir(200, conta);
+            }
+            catch (SaldoInsuficienteException e)
+            {
+                Console.WriteLine(e.Message);
+                Console.WriteLine("Exceção do tipo SaldoInsuficienteException");
+            }
+
+            
+            //Teste de Sacar com valores negativos
+            try
+            {
+                /*ContaCorrente conta = new ContaCorrente(5678, 12987);
+                conta.Sacar(-500);*/
+            }
+            catch (ArgumentException e)
+            {
+                Console.WriteLine("Argumento com problema: " + e.ParamName);
+                Console.WriteLine("Ocorreu uma exceção do tipo ArgumentException");
+                Console.WriteLine(e.Message);
+                
+            }
+
+            //Teste de Sacar quando saldo é inferior ao valor a ser sacado
+            try
+            {
+               /* ContaCorrente contaCorrente = new ContaCorrente(123, 456456);
+                contaCorrente.Depositar(100);
+                contaCorrente.Sacar(400);*/
+            }
+            catch (SaldoInsuficienteException e)
+            {
+                Console.WriteLine(e.Message);
+                Console.WriteLine("Exceção do tipo SaldoInsuficienteException");
+            }
+
+            //Teste argumentos 0 para agencia e numero
+            try
+            {
+                //ContaCorrente conta = new ContaCorrente(0, 0);
             }
             catch (ArgumentException e)
             {
                 Console.WriteLine(e.Message);
                 Console.WriteLine(e.ParamName);
             }
-            
-            
-            
 
+            //Teste de divisao com zero
             try
             {
                 //Metodo();
-                
+
             }
             catch (DivideByZeroException e)
             {
@@ -39,7 +81,7 @@ namespace ByteBank
                 Console.WriteLine(e.Message);
                 Console.WriteLine(e.StackTrace);
             }
-            
+
 
             Console.ReadLine();
         }
@@ -55,7 +97,7 @@ namespace ByteBank
                 Console.WriteLine("Exceção com número = " + numero + " e divisor = " + divisor);
                 throw;
             }
-            
+
         }
 
         static void Metodo()
