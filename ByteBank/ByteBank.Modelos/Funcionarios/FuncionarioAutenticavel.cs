@@ -7,9 +7,11 @@ using System.Threading.Tasks;
 
 namespace ByteBank.Modelos.Funcionarios
 {
-    public class FuncionarioAutenticavel : Funcionario,  IAutenticavel
+    public abstract class FuncionarioAutenticavel : Funcionario,  IAutenticavel
     {
         public string Senha { get; set; }
+
+        private AutenticacaoHelper _autenticacaoHelper = new AutenticacaoHelper();
 
         public FuncionarioAutenticavel (double salario, string cpf) : base (salario, cpf)
         {
@@ -18,10 +20,10 @@ namespace ByteBank.Modelos.Funcionarios
                 
         public bool Autenticar(string senha)
         {
-            return Senha == senha;
+            return _autenticacaoHelper.CompararSenha(Senha, senha);
         }
 
-        public override double GetBonificacao()
+        internal protected override double GetBonificacao()
         {
             throw new NotImplementedException();
         }
