@@ -1,0 +1,9 @@
+D:\Alura\CSharp\Exceptions_DLL_Nuget_String_ObjectClass\ByteBank.SistemaInterno\ByteBank.SistemaInterno\bin\Debug\ByteBank.SistemaInterno.exe.config
+D:\Alura\CSharp\Exceptions_DLL_Nuget_String_ObjectClass\ByteBank.SistemaInterno\ByteBank.SistemaInterno\bin\Debug\ByteBank.SistemaInterno.exe
+D:\Alura\CSharp\Exceptions_DLL_Nuget_String_ObjectClass\ByteBank.SistemaInterno\ByteBank.SistemaInterno\bin\Debug\ByteBank.SistemaInterno.pdb
+D:\Alura\CSharp\Exceptions_DLL_Nuget_String_ObjectClass\ByteBank.SistemaInterno\ByteBank.SistemaInterno\bin\Debug\ByteBank.Modelos.dll
+D:\Alura\CSharp\Exceptions_DLL_Nuget_String_ObjectClass\ByteBank.SistemaInterno\ByteBank.SistemaInterno\obj\Debug\ByteBank.SistemaInterno.csproj.AssemblyReference.cache
+D:\Alura\CSharp\Exceptions_DLL_Nuget_String_ObjectClass\ByteBank.SistemaInterno\ByteBank.SistemaInterno\obj\Debug\ByteBank.SistemaInterno.csproj.CoreCompileInputs.cache
+D:\Alura\CSharp\Exceptions_DLL_Nuget_String_ObjectClass\ByteBank.SistemaInterno\ByteBank.SistemaInterno\obj\Debug\ByteBank.SistemaInterno.csproj.CopyComplete
+D:\Alura\CSharp\Exceptions_DLL_Nuget_String_ObjectClass\ByteBank.SistemaInterno\ByteBank.SistemaInterno\obj\Debug\ByteBank.SistemaInterno.exe
+D:\Alura\CSharp\Exceptions_DLL_Nuget_String_ObjectClass\ByteBank.SistemaInterno\ByteBank.SistemaInterno\obj\Debug\ByteBank.SistemaInterno.pdb
