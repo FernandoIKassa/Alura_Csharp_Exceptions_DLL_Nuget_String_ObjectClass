@@ -1,7 +1,0 @@
-D:\Alura\CSharp\Exceptions\ByteBank\bin\Debug\ByteBank.exe.config
-D:\Alura\CSharp\Exceptions\ByteBank\bin\Debug\ByteBank.exe
-D:\Alura\CSharp\Exceptions\ByteBank\bin\Debug\ByteBank.pdb
-D:\Alura\CSharp\Exceptions\ByteBank\obj\Debug\ByteBank.csproj.AssemblyReference.cache
-D:\Alura\CSharp\Exceptions\ByteBank\obj\Debug\ByteBank.csproj.CoreCompileInputs.cache
-D:\Alura\CSharp\Exceptions\ByteBank\obj\Debug\ByteBank.exe
-D:\Alura\CSharp\Exceptions\ByteBank\obj\Debug\ByteBank.pdb
