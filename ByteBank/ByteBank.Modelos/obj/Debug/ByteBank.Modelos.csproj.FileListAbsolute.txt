@@ -1,3 +1,4 @@
+D:\Alura\CSharp\Exceptions_DLL_Nuget_String_ObjectClass\ByteBank\ByteBank.Modelos\bin\Debug\ByteBank.Modelos.xml
 D:\Alura\CSharp\Exceptions_DLL_Nuget_String_ObjectClass\ByteBank\ByteBank.Modelos\bin\Debug\ByteBank.Modelos.dll
 D:\Alura\CSharp\Exceptions_DLL_Nuget_String_ObjectClass\ByteBank\ByteBank.Modelos\bin\Debug\ByteBank.Modelos.pdb
 D:\Alura\CSharp\Exceptions_DLL_Nuget_String_ObjectClass\ByteBank\ByteBank.Modelos\obj\Debug\ByteBank.Modelos.csproj.AssemblyReference.cache

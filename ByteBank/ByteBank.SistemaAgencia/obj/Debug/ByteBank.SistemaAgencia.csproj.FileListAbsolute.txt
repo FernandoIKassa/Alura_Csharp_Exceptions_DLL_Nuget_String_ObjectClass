@@ -8,3 +8,4 @@ D:\Alura\CSharp\Exceptions_DLL_Nuget_String_ObjectClass\ByteBank\ByteBank.Sistem
 D:\Alura\CSharp\Exceptions_DLL_Nuget_String_ObjectClass\ByteBank\ByteBank.SistemaAgencia\bin\Debug\ByteBank.Modelos.dll
 D:\Alura\CSharp\Exceptions_DLL_Nuget_String_ObjectClass\ByteBank\ByteBank.SistemaAgencia\bin\Debug\ByteBank.Modelos.pdb
 D:\Alura\CSharp\Exceptions_DLL_Nuget_String_ObjectClass\ByteBank\ByteBank.SistemaAgencia\obj\Debug\ByteBank.SistemaAgencia.csproj.CopyComplete
+D:\Alura\CSharp\Exceptions_DLL_Nuget_String_ObjectClass\ByteBank\ByteBank.SistemaAgencia\bin\Debug\ByteBank.Modelos.xml

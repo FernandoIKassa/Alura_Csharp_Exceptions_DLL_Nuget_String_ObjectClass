@@ -14,7 +14,7 @@ namespace ByteBank.Modelos.Funcionarios
             Console.WriteLine("Criando Diretor...");
         }
 
-        public override double GetBonificacao()
+        public double GetBonificacao()
         {
             
             return Salario * 0.5;

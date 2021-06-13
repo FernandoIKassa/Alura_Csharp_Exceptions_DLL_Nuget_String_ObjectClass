@@ -35,7 +35,14 @@ namespace ByteBank.Modelos
             }
         }
 
-
+        /// <summary>
+        /// Classe para representar uma Conta Corrente do banco ByteBank
+        ///
+        /// </summary>
+        /// <param name="agencia">Representa o valor da propriedade <see cref="Agencia"/> e
+        /// deve possuir um valor maior que zero</param>
+        /// <param name="numero">Representa o valor da propriedade <see cref="Numero"/> e
+        /// deve possuir um valor maior que zero</param>
         public ContaCorrente(int agencia, int numero)
         {
 
@@ -58,7 +65,12 @@ namespace ByteBank.Modelos
             
         }
 
-
+        /// <summary>
+        /// Realiza o saque e atualiza o valor da propriedade <see cref="Saldo"/>.
+        /// </summary>
+        /// <param name="valor">Representa o valor do saque, deve ser maior que 0 e menor que o <see cref="Saldo"/>.</param>
+        /// <exception cref="SaldoInsuficienteException">Exceção lançada quando o valor de <paramref name="valor"/> é maior que
+        /// o maior valor da propriedade <see cref="Saldo"/> </exception>
         public void Sacar(double valor)
         {
             if(valor < 0)
@@ -72,7 +84,6 @@ namespace ByteBank.Modelos
                 throw new SaldoInsuficienteException(Saldo, valor);
             }
 
-            
             _saldo -= valor;
             
         }
@@ -82,12 +93,23 @@ namespace ByteBank.Modelos
             _saldo += valor;
         }
 
+        /// <summary>
+        /// Realiza <see cref="Sacar(double)"/> da origem, diminuindo-se <see cref="ContaCorrente.Saldo"/> da conta origem
+        /// de acordo com o argumento <paramref name="valor"/> para aumento da propriedade <see cref="Saldo"/>
+        /// da conta correte indicada no argumento <paramref name="contaDestino"/> através do
+        /// método <see cref="Depositar(double)"/>
+        /// </summary>
+        /// <param name="valor">Argumento que indica quanto será retirada da conta origem para ser enviado a <paramref name="contaDestino"/>"/></param>
+        /// <param name="contaDestino">Argumento indicando qual <see cref="ContaCorrente"/> será destino do envio do <paramref name="valor"/></param>
+        /// <exception cref="ArgumentException">Exceção lançada quando <paramref name="valor"></paramref> contém um valor menor que zero></exception>
+        /// <exception cref="SaldoInsuficienteException">Exceção lançada quando <paramref name="valor"/>
+        /// supera <see cref="ContaCorrente.Saldo"></see> da conta origem/></exception>
 
         public void Transferir(double valor, ContaCorrente contaDestino)
         {
             if (valor < 0)
             {
-                throw new SaldoInsuficienteException("Valor inválido para transferencia.");
+                throw new ArgumentException("Valor inválido para transferencia.");
             }
 
             try
