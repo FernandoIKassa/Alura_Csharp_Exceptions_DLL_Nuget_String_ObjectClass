@@ -4,6 +4,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using Humanizer;
 
 namespace ByteBank.SistemaAgencia
 {
@@ -16,6 +17,18 @@ namespace ByteBank.SistemaAgencia
 
             Console.WriteLine(conta.Agencia);
             Console.WriteLine(conta.Numero);
+
+            DateTime dataFimPagamento = new DateTime(2022, 02, 12);
+            DateTime dataCorrente = DateTime.Today;
+
+            Console.WriteLine(dataFimPagamento);
+            Console.WriteLine(dataCorrente);
+
+            TimeSpan diferenca = dataFimPagamento - dataCorrente;
+            
+            string mensagem = "Vencimento em " + TimeSpanHumanizeExtensions.Humanize(diferenca);
+            Console.WriteLine(mensagem);
+
 
             Console.ReadLine();
         }
