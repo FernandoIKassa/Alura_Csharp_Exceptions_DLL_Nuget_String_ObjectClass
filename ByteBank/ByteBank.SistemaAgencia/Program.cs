@@ -12,24 +12,13 @@ namespace ByteBank.SistemaAgencia
     {
         static void Main(string[] args)
         {
-            ContaCorrente conta = new ContaCorrente(123, 123456);
+            string url = "pagina?argumentos";
+            string argumentos = url.Substring(7);
 
+            Console.WriteLine(url);
+            Console.WriteLine(argumentos);
 
-            Console.WriteLine(conta.Agencia);
-            Console.WriteLine(conta.Numero);
-
-            DateTime dataFimPagamento = new DateTime(2022, 02, 12);
-            DateTime dataCorrente = DateTime.Today;
-
-            Console.WriteLine(dataFimPagamento);
-            Console.WriteLine(dataCorrente);
-
-            TimeSpan diferenca = dataFimPagamento - dataCorrente;
             
-            string mensagem = "Vencimento em " + TimeSpanHumanizeExtensions.Humanize(diferenca);
-            Console.WriteLine(mensagem);
-
-
             Console.ReadLine();
         }
     }
