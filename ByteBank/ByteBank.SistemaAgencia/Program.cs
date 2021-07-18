@@ -36,11 +36,28 @@ namespace ByteBank.SistemaAgencia
             //string patternPhoneCellPhone = "[0-9]{4,5}-[0,1][0-9]{4,5}";
             //string patternPhoneCellPhone = "[0-9]{4,5}-?[0-9]{4,5}";
 
-            string padraoNumeroTelefoneCelular = "[0-9]{4,5}-?[0-9]{4,5}";
+            /*string padraoNumeroTelefoneCelular = "[0-9]{4,5}-?[0-9]{4,5}";
             string texto = "Meu numero de celular é 91234-1234.";
 
             Match match = Regex.Match(texto, padraoNumeroTelefoneCelular);
-            Console.WriteLine(match.Value);
+            Console.WriteLine(match.Value);*/
+
+
+            //Override ToString to print objects
+            /*ContaCorrente conta = new ContaCorrente(1234, 1234567);
+            Console.WriteLine(conta);*/
+
+            Cliente fernando1 = new Cliente();
+            fernando1.Nome = "Fernando";
+            fernando1.CPF = "123.123.123.-79";
+            fernando1.Profissao = "Suporte L2";
+
+            Cliente fernando2 = new Cliente();
+            fernando2.Nome = "Fernando";
+            fernando2.CPF = "123.123.123.-79";
+            fernando2.Profissao = "Suporte L2";
+
+            Console.WriteLine(fernando1.Equals(fernando2));
 
             Console.ReadLine();
         }

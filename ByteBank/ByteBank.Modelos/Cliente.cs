@@ -11,6 +11,7 @@ namespace ByteBank.Modelos
         private string _cpf;
 
         public string Nome { get; set; }
+        public string Profissao { get; set; }
         public string CPF
         {
             get
@@ -23,6 +24,20 @@ namespace ByteBank.Modelos
                 _cpf = value;
             }
         }
-        public string Profissao { get; set; }
+        
+
+        public override bool Equals(object obj)
+        {
+            Cliente outroCliente = obj as Cliente;
+
+            if (outroCliente == null)
+            {
+                return false;
+            }
+
+            return Nome == outroCliente.Nome &&
+                CPF == outroCliente.CPF &&
+                Profissao == outroCliente.Profissao;
+        }
     }
 }
